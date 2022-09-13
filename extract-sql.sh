@@ -22,7 +22,7 @@ function printHelp() {
 	echo -e "\t\tRequired. \033[0;0mThe file to search into\033[0;37m"
 	echo ""
 	echo -e "\t-o, --output"
-	echo -e "\t\t\033[0;0mThe file to write the result into\033[0;37m"
+	echo -e "\t\t\033[0;0mThe file to write the extracted result in\033[0;37m"
 }
 
 # Loop that parses the args / options of the command
