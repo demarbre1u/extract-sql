@@ -4,6 +4,7 @@
 HELP=0
 OUTPUT_FILE="extract.sql"
 
+# Color values
 BASE_COLOR="\033[0;37m"
 RED_COLOR="\033[0;31m"
 CYAN_COLOR="\033[0;36m"
@@ -89,6 +90,6 @@ if [ ! -f "$INPUT_FILE" ]; then
 	exit 3
 fi
 
-tr '\n' ' ' < "$INPUT_FILE" | grep -oE "$QUERY .*?; " > "$OUTPUT_FILE"
+tr "\n" ' ' < "$INPUT_FILE" | tr "\r" ' ' | grep -oE "$QUERY .*?; " > "$OUTPUT_FILE"
 
 exit $?
