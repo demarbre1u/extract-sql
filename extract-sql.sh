@@ -6,7 +6,7 @@ OUTPUT_FILE="extract.sql"
 
 function printHelp() {
 	echo ""
-	echo -e "\033[0;37mThis bash script searches for every occurences of a given SQL query in a given file, and extracts it to another file."
+	echo -e "\033[0;37mThis bash script searches for every occurences of a given SQL query in a given file, and extracts them to another file."
 	echo ""
 	echo -e "\033[0;36mUsage:\033[0;37m"
 	echo -e "\t./extract_sql.sh [-h|--help] [-q|--query=query] [-i|--input=input_file] [-o|--o=output_file]"
