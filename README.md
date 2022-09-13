@@ -2,20 +2,24 @@
 
 ## Introduction
 
-This project is a simple bash script that can extract an `INSERT INTO` query from a SQL dump.
+This bash script searches for a given SQL query in a given file, and extracts it.
 
-The extracted intruction is then written in a file called `extract.sql`.
+## How to use 
 
-## Usage 
-
-To run the script : 
-
-```bash
-Usage : ./extract_sql.sh table_name sql_file
 ```
+Usage: 
+	./extract_sql.sh [-h|--help] [-q|--query=query] [-i|--input=input_file] [-o|--o=output_file]
 
-To display the help :
+Options:
+	-h, --help
+		Display this menu
 
-```bash
-./extract_sql.sh -h
+	-q, --query
+		Required. The keyword to look for in the specified file
+
+	-i, --input
+		Required. The file to search into
+
+	-o, --output 
+		The file to write the extracted result in
 ```
