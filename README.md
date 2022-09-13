@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This bash script searches for every occurences of a given SQL query in a given file, and extracts it to another file.
+This bash script searches for every occurences of a given SQL query in a given file, and extracts them to another file.
 
 ## How to use 
 
