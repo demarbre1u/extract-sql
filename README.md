@@ -14,7 +14,7 @@ Usage:
 
   ./extract-sql.sh [-v|--version]
 
-  ./extract-sql.sh [-q|--query=query] [-i|--input=input_file] [-o|--outpout=output_file]
+  ./extract-sql.sh [-q|--query=query] [-i|--input=input_file] [-o|--output=output_file]
 
 Options:
   -h, --help

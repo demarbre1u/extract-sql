@@ -21,7 +21,7 @@ function printHelp() {
 	echo ""
 	echo -e "${TAB}./extract-sql.sh [-v|--version]"
 	echo ""
-	echo -e "${TAB}./extract-sql.sh [-q|--query=query] [-i|--input=input_file] [-o|--outpout=output_file]"
+	echo -e "${TAB}./extract-sql.sh [-q|--query=query] [-i|--input=input_file] [-o|--output=output_file]"
 	echo ""
 	echo -e "${CYAN_COLOR}Options:${BASE_COLOR}"
 	echo -e "${TAB}-h, --help"
