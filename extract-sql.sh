@@ -3,6 +3,7 @@
 # Default option values
 HELP=0
 OUTPUT_FILE="extract.sql"
+VERSION="v1.0.0"
 
 # Color values
 BASE_COLOR="\033[0;37m"
@@ -22,6 +23,9 @@ function printHelp() {
 	echo -e "${TAB}-h, --help"
 	echo -e "${TAB}${TAB}Display this menu"
 	echo ""
+	echo -e "${TAB}-v, --version"
+	echo -e "${TAB}${TAB}Display the version of the script"
+	echo ""
 	echo -e "${TAB}-q, --query"
 	echo -e "${TAB}${TAB}Required. The keyword to look for in the specified file"
 	echo ""
@@ -32,12 +36,20 @@ function printHelp() {
 	echo -e "${TAB}${TAB}The file to write the extracted result in. By default, the file name is '${OUTPUT_FILE}'."
 }
 
+function printVersion() {
+	echo $VERSION
+}
+
 # Loop that parses the args / options of the command
 for i in "$@"; do
 	case $i in
 		-h|--help)
-      		HELP=1
-      		shift
+			printHelp
+			exit 0
+      		;;
+		-v|--version)
+			printVersion
+			exit 0
       		;;
 		-q=*|--query=*)
 			QUERY="${i#*=}"
@@ -63,12 +75,6 @@ for i in "$@"; do
       		;;
 	esac
 done
-
-# Prints help
-if [ $HELP -eq 1 ]; then
-	printHelp
-	exit 0
-fi
 
 # query and input are required options
 if [ -z "$QUERY" ]; then 
