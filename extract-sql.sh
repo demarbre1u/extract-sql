@@ -3,7 +3,7 @@
 # Default option values
 HELP=0
 OUTPUT_FILE="extract.sql"
-VERSION="v1.0.0"
+VERSION="v1.0.1"
 
 # Color values
 BASE_COLOR="\033[0;37m"
