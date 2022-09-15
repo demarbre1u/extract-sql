@@ -29,7 +29,7 @@ function printHelp() {
 	echo -e "${TAB}${TAB}Required. The file to search into"
 	echo ""
 	echo -e "${TAB}-o, --output"
-	echo -e "${TAB}${TAB}The file to write the extracted result in"
+	echo -e "${TAB}${TAB}The file to write the extracted result in. By default, the file name is '${OUTPUT_FILE}'."
 }
 
 # Loop that parses the args / options of the command

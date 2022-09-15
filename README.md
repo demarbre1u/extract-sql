@@ -4,12 +4,12 @@
 
 This bash script searches for every occurences of a given SQL query in a given file, and extracts them to another file.
 
-## How to use 
+## How to use
 
 ### Usage
 
 ```
-Usage: 
+Usage:
 	./extract_sql.sh [-h|--help] [-q|--query=query] [-i|--input=input_file] [-o|--o=output_file]
 
 Options:
@@ -22,13 +22,13 @@ Options:
 	-i, --input
 		Required. The file to search into
 
-	-o, --output 
-		The file to write the extracted result in
+	-o, --output
+		The file to write the extracted result in. By default, the file name is 'extract.sql'.
 ```
 
 ### Example
 
-The content of `input_file.sql` : 
+The content of `input_file.sql` :
 
 ```sql
 CREATE TABLE IF NOT EXISTS `pokemons` (
@@ -80,15 +80,15 @@ INSERT INTO `pokemons_evolutions` (`level`, `baseId`, `evolutionId`) VALUES
 (36, 13, 14);
 ```
 
-The command to run the script, to extract the `CREATE TABLE` queries : 
+The command to run the script, to extract the `CREATE TABLE` queries :
 
 ```bash
 ./extract-sql.bash -i=input_file.sql -q="CREATE TABLE" -o=output_file.sql
 ```
 
-The content of the `output_file.sql` once the command is done : 
+The content of the `output_file.sql` once the command is done :
 
 ```sql
-CREATE TABLE IF NOT EXISTS `pokemons` (   `id` int(11) NOT NULL AUTO_INCREMENT,   `name` varchar(255) NOT NULL,   `image` varchar(255) NOT NULL DEFAULT 'placeholder.png',   `hp` int(11) NOT NULL DEFAULT '1',   `attack` int(11) NOT NULL DEFAULT '1',   `specialAttack` int(11) NOT NULL DEFAULT '1',   `experienceGiven` int(11) NOT NULL DEFAULT '1',   `moneyGiven` int(11) NOT NULL DEFAULT '1',   PRIMARY KEY (`id`) ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;  
+CREATE TABLE IF NOT EXISTS `pokemons` (   `id` int(11) NOT NULL AUTO_INCREMENT,   `name` varchar(255) NOT NULL,   `image` varchar(255) NOT NULL DEFAULT 'placeholder.png',   `hp` int(11) NOT NULL DEFAULT '1',   `attack` int(11) NOT NULL DEFAULT '1',   `specialAttack` int(11) NOT NULL DEFAULT '1',   `experienceGiven` int(11) NOT NULL DEFAULT '1',   `moneyGiven` int(11) NOT NULL DEFAULT '1',   PRIMARY KEY (`id`) ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `pokemons_evolutions` (   `level` int(11) NOT NULL DEFAULT '1',   `baseId` int(11) NOT NULL,   `evolutionId` int(11) NOT NULL,   PRIMARY KEY (`baseId`,`evolutionId`),   KEY `evolutionId` (`evolutionId`) ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ```
