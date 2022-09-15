@@ -92,6 +92,6 @@ The command to run the script, to extract the `CREATE TABLE` queries :
 The content of the `output_file.sql` once the command is done :
 
 ```sql
-CREATE TABLE IF NOT EXISTS `pokemons` (   `id` int(11) NOT NULL AUTO_INCREMENT,   `name` varchar(255) NOT NULL,   `image` varchar(255) NOT NULL DEFAULT 'placeholder.png',   `hp` int(11) NOT NULL DEFAULT '1',   `attack` int(11) NOT NULL DEFAULT '1',   `specialAttack` int(11) NOT NULL DEFAULT '1',   `experienceGiven` int(11) NOT NULL DEFAULT '1',   `moneyGiven` int(11) NOT NULL DEFAULT '1',   PRIMARY KEY (`id`) ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
-CREATE TABLE IF NOT EXISTS `pokemons_evolutions` (   `level` int(11) NOT NULL DEFAULT '1',   `baseId` int(11) NOT NULL,   `evolutionId` int(11) NOT NULL,   PRIMARY KEY (`baseId`,`evolutionId`),   KEY `evolutionId` (`evolutionId`) ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `pokemons` (     `id` int(11) NOT NULL AUTO_INCREMENT,     `name` varchar(255) NOT NULL,     `image` varchar(255) NOT NULL DEFAULT 'placeholder.png',     `hp` int(11) NOT NULL DEFAULT '1',     `attack` int(11) NOT NULL DEFAULT '1',     `specialAttack` int(11) NOT NULL DEFAULT '1',     `experienceGiven` int(11) NOT NULL DEFAULT '1',     `moneyGiven` int(11) NOT NULL DEFAULT '1',     PRIMARY KEY (`id`) ) ENGINE = InnoDB AUTO_INCREMENT = 15 DEFAULT CHARSET = latin1;
+CREATE TABLE IF NOT EXISTS `pokemons_evolutions` (     `level` int(11) NOT NULL DEFAULT '1',     `baseId` int(11) NOT NULL,     `evolutionId` int(11) NOT NULL,     PRIMARY KEY (`baseId`, `evolutionId`),     KEY `evolutionId` (`evolutionId`) ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 ```
