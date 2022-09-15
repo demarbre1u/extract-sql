@@ -10,7 +10,11 @@ This bash script searches for every occurences of a given SQL query in a given f
 
 ```
 Usage:
-  ./extract_sql.sh [-h|--help] [-v|--version] [-q|--query=query] [-i|--input=input_file] [-o|--o=output_file]
+  ./extract_sql.sh [-h|--help]
+
+  ./extract_sql.sh [-v|--version]
+
+  ./extract_sql.sh [-q|--query=query] [-i|--input=input_file] [-o|--o=output_file]
 
 Options:
   -h, --help
